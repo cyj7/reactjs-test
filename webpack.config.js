@@ -4,11 +4,11 @@ var webpack = require("webpack");
 var node_modules = path.resolve(__dirname, 'node_modules');
 var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 var staticPath = 'assets';
-var port = 3001;
+var port = 4001;
 module.exports = {
   entry: [
     'webpack/hot/dev-server',
-    path.resolve(__dirname, 'static/src/main.js')
+    './static/src/Main.js'
   ],
   output: {
     path: path.resolve(__dirname, staticPath),
@@ -24,12 +24,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        loader: 'babel'
-      }, {
-        test: /\.js$/,
-        exclude: node_modules,
-        loader: 'babel'
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          "presets": ["react", "es2015", "stage-0", "react-hmre"]
+        }
       }, {
         test: /\.sass$/,
         loader: 'style!css!sass'
@@ -41,6 +41,7 @@ module.exports = {
     noParse: [pathToReact]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 };

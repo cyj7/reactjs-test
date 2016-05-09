@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "095d234879c8a4a2c6a5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a944c4c639ff2e4010bb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -584,7 +584,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	(function webpackMissingModule() { throw new Error("Cannot find module \"/home/caoyujiao/test/reactjs-test/static/src/main.js\""); }());
+	(function webpackMissingModule() { throw new Error("Cannot find module \"./static/src/Main.js\""); }());
 
 
 /***/ },
