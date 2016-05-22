@@ -6,6 +6,8 @@ export const LISTDATE = 'LIST_DATE';
 //action
 export const newList = createAction(LISTDATE,(payload) => payload);
 
+
+
 export const actions = {
     newList
 }
